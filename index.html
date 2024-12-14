@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific & Graphing Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Scientific & Graphing Calculator</h1>
+    <div class="tabs">
+      <button class="tab-button" onclick="switchTab('calculator')">Scientific Calculator</button>
+      <button class="tab-button" onclick="switchTab('graphing')">Graphing Calculator</button>
+    </div>
+    <div id="calculator-tab" class="tab">
+      <div class="scientific-calculator">
+        <input type="text" id="calc-display" disabled>
+        <div class="buttons">
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="operate('/')">÷</button>
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="operate('*')">×</button>
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          <button onclick="operate('-')">−</button>
+          <button onclick="appendValue('0')">0</button>
+          <button onclick="appendValue('.')">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="operate('+')">+</button>
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendValue('(')">(</button>
+          <button onclick="appendValue(')')">)</button>
+          <button onclick="appendValue('Math.sin(')">sin</button>
+          <button onclick="appendValue('Math.cos(')">cos</button>
+          <button onclick="appendValue('Math.tan(')">tan</button>
+          <button onclick="appendValue('Math.log(')">log</button>
+          <button onclick="appendValue('Math.sqrt(')">√</button>
+          <button onclick="appendValue('**')">^</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="graphing-tab" class="tab" style="display: none;">
+      <div class="graphing-calculator">
+        <label for="equation">Enter Function (e.g., x^2, sin(x)):</label>
+        <input type="text" id="equation" placeholder="e.g., x^2 + 2x + 1">
+        <button onclick="plotGraph()">Plot Graph</button>
+        <button onclick="clearGraph()">Clear</button>
+        <canvas id="graphCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
