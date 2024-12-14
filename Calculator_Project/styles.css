@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for contrast */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #1e1e1e; /* Darker container for modern look */
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Smooth shadow */
+  max-width: 400px; /* Restrict width for compact calculator look */
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #ffffff; /* White text */
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.tab-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+.tab {
+  display: none;
+}
+
+#calculator-tab {
+  display: block;
+}
+
+/* Input Bar */
+input {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: right;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons Section */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* Spacing between buttons */
+  justify-content: center;
+}
+
+button {
+  padding: 20px; /* Larger buttons for touch-friendly design */
+  font-size: 1.3em; /* Bigger text for readability */
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Button shadow for 3D effect */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* Depress effect on click */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Graphing Section */
+canvas {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Increase the maximum width */
+  height: 400px; /* Set a larger height for better visibility */
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  background-color: #121212;
+}
