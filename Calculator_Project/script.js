@@ -68,8 +68,25 @@ function plotGraph() {
   renderGraph(xValues, yValues);
 }
 
+function clearGraph() {
+  const canvas = document.getElementById('graphCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+  canvas.width = 600; // Set consistent width
+  canvas.height = 400; // Set consistent height
+  document.getElementById('equation').value = ''; // Clear the equation input
+  if (window.graphChart) {
+    window.graphChart.destroy(); // Destroy existing chart if any
+    window.graphChart = null;
+  }
+}
+
 function renderGraph(xValues, yValues) {
-  const ctx = document.getElementById('graphCanvas').getContext('2d');
+  const canvas = document.getElementById('graphCanvas');
+  canvas.width = 600; // Ensure fixed width
+  canvas.height = 400; // Ensure fixed height
+
+  const ctx = canvas.getContext('2d');
 
   if (window.graphChart) {
     window.graphChart.destroy();
