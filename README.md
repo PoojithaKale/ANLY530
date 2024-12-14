@@ -1,1 +1,1 @@
-Machine Learning course with projects and code expreiments
+Code experiment for calculator
